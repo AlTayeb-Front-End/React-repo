@@ -15,21 +15,53 @@ function App() {
       title: "title 1",
       body: "This is body 1",
       seprator: <div style={{ borderTop: "2px solid red" }}></div>,
+      children: (
+        <div style={{ border: "2px solid red" }}>
+          <div style={{ borderTop: "2px solid red" }}></div>
+          <div style={{ borderTop: "2px solid green" }}>This is first div</div>
+          <div style={{ borderTop: "2px solid blue" }}></div>
+          <div style={{ borderTop: "2px solid blue" }}></div>
+        </div>
+      ),
     },
     {
       title: "title 2",
       body: "This is body 2",
       seprator: <div style={{ borderTop: "2px dashed yellow" }}></div>,
+      children: (
+        <div style={{ border: "2px dashed yellow" }}>
+          <div style={{ borderTop: "2px dashed red" }}></div>
+          <div style={{ borderTop: "2px dashed green" }}>This is two div</div>
+          <div style={{ borderTop: "2px dashed blue" }}></div>
+          <div style={{ borderTop: "2px dashed blue" }}></div>
+        </div>
+      ),
     },
     {
       title: "title 3",
       body: "This is body 3",
-      seprator: <div style={{ borderTop: "2px pointed white" }}></div>,
+      seprator: <div style={{ borderTop: "2px dashed white" }}></div>,
+      children: (
+        <div style={{ border: "2px dashed white" }}>
+          <div style={{ borderTop: "2px dashed red" }}></div>
+          <div style={{ borderTop: "2px dashed green" }}>This is three div</div>
+          <div style={{ borderTop: "2px dashed blue" }}></div>
+          <div style={{ borderTop: "2px dashed blue" }}></div>
+        </div>
+      ),
     },
     {
       title: "title 4",
       body: "This is body 4",
       seprator: <div style={{ borderTop: "2px solid blue" }}></div>,
+      children: (
+        <div style={{ border: "2px solid blue" }}>
+          <div style={{ borderTop: "2px solid red" }}></div>
+          <div style={{ borderTop: "2px solid green" }}>This is four div</div>
+          <div style={{ borderTop: "2px solid blue" }}></div>
+          <div style={{ borderTop: "2px solid blue" }}></div>
+        </div>
+      ),
     },
   ];
   return (

@@ -1,11 +1,12 @@
 import "../style/post.css";
 
-export default function Post({ title, body, seprator }) {
+export default function Post({ title, body, seprator, children }) {
   return (
-    <dev className={"dev-post"}>
+    <div className={"div-post"}>
       <h2>{title}</h2>
       {seprator}
       <p>{body}</p>
-    </dev>
+      {children}
+    </div>
   );
 }
