@@ -1,0 +1,7 @@
+.dev-post {
+  display: block;
+  min-width: 400px;
+  border: 2px solid rgb(21, 218, 60);
+  text-align: center;
+  padding: 15px;
+}

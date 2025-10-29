@@ -1,0 +1,9 @@
+.tag-button {
+  background-color: blueviolet;
+  color: white;
+  transition: 0.3s linear;
+}
+
+.tag-button:hover {
+  background-color: rgba(137, 43, 226, 0.742);
+}
