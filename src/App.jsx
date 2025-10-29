@@ -10,12 +10,33 @@ import Posts from "./sections/Posts";
 
 function App() {
   // const [count, setCount] = useState(0);
-
+  const data = [
+    {
+      title: "title 1",
+      body: "This is body 1",
+      seprator: <div style={{ borderTop: "2px solid red" }}></div>,
+    },
+    {
+      title: "title 2",
+      body: "This is body 2",
+      seprator: <div style={{ borderTop: "2px dashed yellow" }}></div>,
+    },
+    {
+      title: "title 3",
+      body: "This is body 3",
+      seprator: <div style={{ borderTop: "2px pointed white" }}></div>,
+    },
+    {
+      title: "title 4",
+      body: "This is body 4",
+      seprator: <div style={{ borderTop: "2px solid blue" }}></div>,
+    },
+  ];
   return (
     <>
       <Header />
       <div style={{ display: "flex", gap: "20px" }}>
-        <Posts />
+        <Posts data={data} />
         <TagButtons />
       </div>
     </>
