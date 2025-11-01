@@ -50,6 +50,25 @@ export default function BasicForm({
           setData({ ...formData, age: event.target.value });
         }}
       />
+      <FormInputText
+        type={"checkbox"}
+        name={"choose"}
+        label={"Skills :"}
+        checked={formData.checkedBox}
+        onChange={(event) => {
+          setData({ ...formData, checkedBox: event.target.checked });
+        }}
+      />
+      <FormInputText
+        type={"radio"}
+        name={"one"}
+        label={"OS :"}
+        placeholder="Choose Your OS :"
+        checked={formData.radioBox}
+        onChange={(event) => {
+          setData({ ...formData, radioBox: event.target.checked });
+        }}
+      />
 
       <input type="submit" />
     </form>

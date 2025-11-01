@@ -12,6 +12,8 @@ function App() {
     password: "",
     email: "",
     age: 0,
+    checkedBox: "",
+    radioBox: "",
   });
   return (
     <>

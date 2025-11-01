@@ -6,22 +6,30 @@ export default function FormInputText({
   label,
   placeholder = "",
   onChange,
-  value,
+  value = "",
+  checked = "",
 }) {
+  const fields = {
+    type: type,
+    id: name,
+    name: name,
+    onChange: onChange,
+  };
   return (
     <article className="form-input-text-article">
       <label className="form-input-text-label" htmlFor={name}>
         {label}
       </label>
-      <input
-        className="form-input-text"
-        type={type}
-        id={name}
-        name={name}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-      />
+      {value !== "" || value !== null || value !== undefined ? (
+        <input
+          className="form-input-text"
+          {...fields}
+          placeholder={placeholder}
+          value={value}
+        />
+      ) : (
+        <input checked={checked} {...fields} />
+      )}
     </article>
   );
 }
