@@ -14,6 +14,7 @@ function App() {
     age: 0,
     checkedBox: "",
     radioBox: "",
+    country: "",
   });
   return (
     <>
@@ -28,6 +29,13 @@ function App() {
         formData={formData}
         setData={setFormData}
       />
+      <div>{formData.userName}</div>
+      <div>{formData.password}</div>
+      <div>{formData.email}</div>
+      <div>{formData.age}</div>
+      <div>{formData.checkedBox}</div>
+      <div>{String(formData.radioBox)}</div>
+      <div>{String(formData.country)}</div>
     </>
   );
 }

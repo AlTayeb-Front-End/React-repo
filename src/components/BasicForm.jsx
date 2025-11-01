@@ -69,7 +69,22 @@ export default function BasicForm({
           setData({ ...formData, radioBox: event.target.checked });
         }}
       />
-
+      <select
+        name="country"
+        id="country"
+        value={formData.country}
+        onChange={(event) => {
+          setData(() => {
+            return { ...formData, country: event.target.value };
+          });
+        }}
+      >
+        <option value="Minya">Minya</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Assute">Assute</option>
+        <option value="Ain-Shams">Ain-Shams</option>
+        <option value="Fayom">Fayom</option>
+      </select>
       <input type="submit" />
     </form>
   );
