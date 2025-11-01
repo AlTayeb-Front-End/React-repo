@@ -1,4 +1,4 @@
-import "../style/post.css";
+import "../style/posts/post.css";
 
 export default function Post({ title, body, seprator, children }) {
   return (

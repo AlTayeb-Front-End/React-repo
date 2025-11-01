@@ -1,5 +1,5 @@
 import Post from "../components/Post";
-import "../style/posts.css";
+import "../style/posts/posts.css";
 export default function Posts({ data }) {
   // let posts = [];
   // for (let counter = 0; counter < data.length; counter++)

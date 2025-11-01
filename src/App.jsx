@@ -1,95 +1,31 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-// import "./App.css";
-// import "./style/global.css";
+import "./style/global.css";
 import TagButtons from "./sections/TagButtons";
 import Post from "./components/Post";
 import Header from "./sections/Header";
 import Posts from "./sections/Posts";
+import BasicForm from "./components/BasicForm";
 import { useState } from "react";
 
 function App() {
-  // const [count, setCount] = useState(0);
-  // const data = [
-  //   {
-  //     title: "title 1",
-  //     body: "This is body 1",
-  //     seprator: <div style={{ borderTop: "2px solid red" }}></div>,
-  //     children: (
-  //       <div style={{ border: "2px solid red" }}>
-  //         <div style={{ borderTop: "2px solid red" }}></div>
-  //         <div style={{ borderTop: "2px solid green" }}>This is first div</div>
-  //         <div style={{ borderTop: "2px solid blue" }}></div>
-  //         <div style={{ borderTop: "2px solid blue" }}></div>
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "title 2",
-  //     body: "This is body 2",
-  //     seprator: <div style={{ borderTop: "2px dashed yellow" }}></div>,
-  //     children: (
-  //       <div style={{ border: "2px dashed yellow" }}>
-  //         <div style={{ borderTop: "2px dashed red" }}></div>
-  //         <div style={{ borderTop: "2px dashed green" }}>This is two div</div>
-  //         <div style={{ borderTop: "2px dashed blue" }}></div>
-  //         <div style={{ borderTop: "2px dashed blue" }}></div>
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "title 3",
-  //     body: "This is body 3",
-  //     seprator: <div style={{ borderTop: "2px dashed white" }}></div>,
-  //     children: (
-  //       <div style={{ border: "2px dashed white" }}>
-  //         <div style={{ borderTop: "2px dashed red" }}></div>
-  //         <div style={{ borderTop: "2px dashed green" }}>This is three div</div>
-  //         <div style={{ borderTop: "2px dashed blue" }}></div>
-  //         <div style={{ borderTop: "2px dashed blue" }}></div>
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "title 4",
-  //     body: "This is body 4",
-  //     seprator: <div style={{ borderTop: "2px solid blue" }}></div>,
-  //     children: (
-  //       <div style={{ border: "2px solid blue" }}>
-  //         <div style={{ borderTop: "2px solid red" }}></div>
-  //         <div style={{ borderTop: "2px solid green" }}>This is four div</div>
-  //         <div style={{ borderTop: "2px solid blue" }}></div>
-  //         <div style={{ borderTop: "2px solid blue" }}></div>
-  //       </div>
-  //     ),
-  //   },
-  // ];
-
-  const [name, setName] = useState("Khaled");
+  const [formData, setFormData] = useState({
+    userName: "",
+    password: "",
+    email: "",
+    age: 0,
+  });
   return (
     <>
       <Header />
-      <div style={{ display: "flex", gap: "20px" }}>
-        {/* <Posts data={data} />
-        <TagButtons /> */}
-        <input
-          type="text"
-          value={name}
-          onChange={() => {
-            setName(() => {
-              return `name`;
-            });
-          }}
-        />
-        <button
-          onClick={() => {
-            setName("AlTayeb");
-          }}
-        >
-          Change Name
-        </button>
-      </div>
+      <BasicForm
+        method={"GET"}
+        action={"/"}
+        onSubmit={(event) => {
+          event.preventDefault();
+          console.log(formData);
+        }}
+        formData={formData}
+        setData={setFormData}
+      />
     </>
   );
 }
