@@ -12,7 +12,7 @@ function App() {
     password: "",
     email: "",
     age: 0,
-    checkedBox: "",
+    checkedBox: [],
     radioBox: "",
     country: "",
   });

@@ -8,6 +8,9 @@ export default function BasicForm({
   formData,
   setData,
 }) {
+  function handelArrayPush(array, value) {
+    return [...array, value];
+  }
   return (
     <form action={action} method={method} onSubmit={onSubmit}>
       <FormInputText
@@ -50,15 +53,89 @@ export default function BasicForm({
           setData({ ...formData, age: event.target.value });
         }}
       />
+      {/* skills check boxs */}
       <FormInputText
         type={"checkbox"}
+        value={"html"}
         name={"choose"}
-        label={"Skills :"}
+        label={"HTHML :"}
         checked={formData.checkedBox}
         onChange={(event) => {
-          setData({ ...formData, checkedBox: event.target.checked });
+          setData({
+            ...formData,
+            checkedBox: handelArrayPush(
+              formData.checkedBox,
+              event.target.value
+            ),
+          });
         }}
       />
+      <FormInputText
+        type={"checkbox"}
+        value={"css"}
+        name={"choose"}
+        label={"CSS :"}
+        checked={formData.checkedBox}
+        onChange={(event) => {
+          setData({
+            ...formData,
+            checkedBox: handelArrayPush(
+              formData.checkedBox,
+              event.target.value
+            ),
+          });
+        }}
+      />
+      <FormInputText
+        type={"checkbox"}
+        value={"javascript"}
+        name={"choose"}
+        label={"JavaScript :"}
+        checked={formData.checkedBox}
+        onChange={(event) => {
+          setData({
+            ...formData,
+            checkedBox: handelArrayPush(
+              formData.checkedBox,
+              event.target.value
+            ),
+          });
+        }}
+      />
+      <FormInputText
+        type={"checkbox"}
+        value={"bootstrap"}
+        name={"choose"}
+        label={"Bootstrap :"}
+        checked={formData.checkedBox}
+        onChange={(event) => {
+          setData({
+            ...formData,
+            checkedBox: handelArrayPush(
+              formData.checkedBox,
+              event.target.value
+            ),
+          });
+        }}
+      />
+      <FormInputText
+        type={"checkbox"}
+        value={"react"}
+        name={"choose"}
+        label={"React :"}
+        checked={formData.checkedBox}
+        onChange={(event) => {
+          setData({
+            ...formData,
+            checkedBox: handelArrayPush(
+              formData.checkedBox,
+              event.target.value
+            ),
+          });
+        }}
+      />
+      {/* end skills check boxs */}
+
       <FormInputText
         type={"radio"}
         name={"one"}
